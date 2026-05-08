@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blind box week</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Space+Grotesk:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <section id="view-intro" class="view view-intro" aria-label="Open your blind box">
+        <div class="intro-hint">Open the blind box and discover what surprise is waiting for you.</div>
+        <div class="scene scene-intro" id="intro-scene">
+          <button type="button" class="intro-box-btn" id="hero-box" aria-label="Open blind box">
+            <img id="hero-box-image" class="intro-box-image" src="asset/box.png" alt="Closed blind box" />
+          </button>
+        </div>
+      </section>
+
+      <section id="view-week" class="view view-week hidden" aria-label="Week overview">
+        <header class="week-header">
+          <h1>This week’s pulls</h1>
+          <p class="week-sub">
+            Tap the blindbox to see how many blinds pulled that day and what are the chase targets. Flip the card to
+            see what we get and how satisfied we will be.
+          </p>
+          <div class="week-actions">
+            <button
+              type="button"
+              class="btn-open-all"
+              id="btn-open-all"
+              aria-pressed="false"
+              aria-label="Open every day at once"
+            >
+              Open all boxes
+            </button>
+          </div>
+        </header>
+        <div class="week-side">
+          <div class="week-sat-avatar" aria-label="Overall satisfaction mood">
+            <img id="week-satisfaction-image" src="asset/normal.png" alt="Normal mood" />
+          </div>
+          <p class="week-total week-total--side" id="week-total-spent">Total spent: —</p>
+          <div class="chase-strip week-chase" id="week-chase-strip"></div>
+          <section class="legend-box" aria-label="Legend for size and color">
+            <h3>Legend</h3>
+            <p class="legend-label">Card size by price</p>
+            <div class="legend-row">
+              <span class="legend-size legend-size--small"></span>
+              <span>Small: $1-6</span>
+            </div>
+            <div class="legend-row">
+              <span class="legend-size legend-size--medium"></span>
+              <span>Medium: $7-18</span>
+            </div>
+            <div class="legend-row">
+              <span class="legend-size legend-size--large"></span>
+              <span>Big: $19-27</span>
+            </div>
+            <p class="legend-label">Color by satisfaction</p>
+            <div class="legend-row">
+              <span class="legend-dot legend-dot--low"></span>
+              <span>Upset / unwanted</span>
+            </div>
+            <div class="legend-row">
+              <span class="legend-dot legend-dot--mid"></span>
+              <span>Okay / neutral</span>
+            </div>
+            <div class="legend-row">
+              <span class="legend-dot legend-dot--high"></span>
+              <span>Happy / wanted</span>
+            </div>
+          </section>
+          <section class="sim-panel sim-panel--side" aria-label="What-if simulation">
+            <div class="sim-panel__head">
+              <h2>What if I spent more or less?</h2>
+              <span class="sim-panel__value" id="sim-budget-value">0%</span>
+            </div>
+            <input id="sim-budget-slider" class="sim-panel__slider" type="range" min="-80" max="100" step="5" value="0" />
+            <div class="sim-metrics">
+              <span id="sim-metric-pulls">Pulls: —</span>
+              <span id="sim-metric-spend">Spend: —</span>
+              <span id="sim-metric-sat">Avg satisfaction: —</span>
+            </div>
+            <div class="sim-color-dots" id="sim-color-dots" aria-label="Satisfaction color mix"></div>
+            <p class="sim-note" id="sim-note">Move slider to add simulated purchases. Extra pulls are simulated from the real outcome distribution, so spending more does not guarantee better results.</p>
+          </section>
+        </div>
+
+        <div class="week-board">
+          <div class="week-align">
+            <div class="pull-columns" id="pull-columns" aria-live="polite"></div>
+            <div class="day-row" id="week-grid"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="intro-blackout" class="intro-blackout" aria-hidden="true"></div>
+    <div id="all-chase-modal" class="all-chase-modal hidden" role="dialog" aria-modal="true" aria-label="All chase items">
+      <div class="all-chase-modal__sheet">
+        <div class="all-chase-modal__head">
+          <h2>All chase items</h2>
+          <button type="button" class="all-chase-modal__close" id="btn-close-all-chases" aria-label="Close all chase popup">Close</button>
+        </div>
+        <div id="all-chase-modal-content" class="all-chase-modal__content"></div>
+      </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

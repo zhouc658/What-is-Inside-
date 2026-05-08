@@ -1,0 +1,43 @@
+{
+  "chaseItemsByDay": {
+    "Monday": [
+      "asset/chase/USRFluttershyChase.PNG",
+      "@asset/chase/PinkieChase.PNG",
+      "ZRPinkyChase.png"
+    ],
+    "Tuesday": [
+      "@asset/LinkClickFelixBadge.PNG",
+      "LinkClickCharlesBadge.PNG",
+      "LinkClickSECcard.PNG"
+    ],
+    "Wednesday": [
+      "HOBMarriageChase.png",
+      "HOBMarriageChase(1).PNG",
+      "HOBChase.PNG"
+    ],
+    "Thursday": [
+      "HOBMarriageChase.PNG",
+      "HOBChase.PNG"
+    ],
+    "Friday": ["@asset/HOB/heavensofficial.JPG"],
+    "Saturday": ["@asset/chase/dimooChase.png"],
+    "Sunday": []
+  },
+  "opens": [
+    { "day": "Monday", "satisfaction": 3, "cost": 3.00, "itemLabel": "USR Fluttershy", "itemImage": "asset/USRFluttershy.jpg" },
+    { "day": "Monday", "satisfaction": 3, "cost": 3.00, "itemLabel": "LSR Twilight", "itemImage": "asset/LSRTwilight.jpg" },
+    { "day": "Monday", "satisfaction": 2, "cost": 3.00, "itemLabel": "SC Pinky", "itemImage": "asset/SCPinky.jpg" },
+    { "day": "Tuesday", "satisfaction": 2, "cost": 7.00, "itemLabel": "LinkClick Felix Badge", "itemImage": "asset/LinkClickFelixBadge.PNG" },
+    { "day": "Tuesday", "satisfaction": 2, "cost": 3.00, "itemLabel": "LinkClick Charles SSP Card", "itemImage": "asset/LinkClickCharlesSSPCard.PNG" },
+    { "day": "Wednesday", "satisfaction": 3, "cost": 8.00, "itemLabel": "HOB Crown Prince", "itemImage": "asset/HOB/HOBCrownPrince.PNG" },
+    { "day": "Wednesday", "satisfaction": 2, "cost": 8.00, "itemLabel": "HOB Fang Xin", "itemImage": "asset/HOB/HOBFangXin.PNG" },
+    { "day": "Wednesday", "satisfaction": 2, "cost": 8.00, "itemLabel": "HOB Spring Hua", "itemImage": "asset/HOB/HOBSpringHua.PNG" },
+    { "day": "Wednesday", "satisfaction": 2, "cost": 8.00, "itemLabel": "HOB Spring Xie", "itemImage": "asset/HOB/HOBSpringXie.PNG" },
+    { "day": "Wednesday", "satisfaction": 1, "cost": 8.00, "itemLabel": "HOB Wu Ming", "itemImage": "asset/HOB/HOBWuMing.PNG" },
+    { "day": "Wednesday", "satisfaction": 1, "cost": 8.00, "itemLabel": "HOB Xiao Hong", "itemImage": "asset/HOB/HOBXiaoHong.PNG" },
+    { "day": "Thursday", "satisfaction": 1, "cost": 8.00, "itemLabel": "HOB Spring Hua", "itemImage": "asset/HOB/HOBSpringHua.PNG" },
+    { "day": "Thursday", "satisfaction": 1, "cost": 8.00, "itemLabel": "HOB Xiao Hong", "itemImage": "asset/HOB/HOBXiaoHong.PNG" },
+    { "day": "Friday", "satisfaction": 3, "cost": 25.0, "itemLabel": "Heaven Official", "itemImage": "asset/HOB/heavensofficial.JPG" },
+    { "day": "Saturday", "satisfaction": 2, "cost": 21.0, "itemLabel": "Dimoo", "itemImage": "asset/dimoo.JPG" }
+  ]
+}
